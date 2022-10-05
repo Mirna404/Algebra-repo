@@ -6,14 +6,41 @@
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 		<meta name="description" content="opis sadržaja stranice" />
 		<meta name="author" content="ime autora stranice" />
-		<title>Glavna stranica</title>
+		<title>Main page</title>
+		<style>
+			body {
+				margin: 0px;
+			}
+			.wrapper {
+				font-family: Arial, Helvetica, sans-serif;
+				background-color: #202c39;
+				width: 100vw;
+				height: 100vh;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+			}
+			.text-style {
+				color: #b8b08d;
+			}
+			.line-style {
+				background-color: #b8b08d;
+				height: 1px;
+				width: 80%;
+				margin-bottom: 0.83em;
+			}
+		</style>
 	</head>
 
 	<body>
-		<h1>Mirna Bušić</h1>
-		<hr />
-		<a href="./domacazadaca1.html" target="_blank"
-			>Ovdje možeš vidjeti moju prvu domaću zadaću sa Algebre!</a
-		>
+		<div class="wrapper text-style">
+			<h1>Algebra</h1>
+			<h2>Mirna Bušić</h2>
+			<div class="line-style"></div>
+			<a href="./domacazadaca1.html" target="_blank" class="text-style"
+				>Ovdje možeš vidjeti moju prvu domaću zadaću sa Algebre!</a
+			>
+		</div>
 	</body>
 </html>
