@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Druga zadaća</title>
+		<style>
+			body {
+				margin: 0px;
+			}
+			.wrapper {
+				font-family: Arial, Helvetica, sans-serif;
+				width: 100vw;
+				height: 100vh;
+				background-color: #a89f68;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			.registration-card {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+				width: 468px;
+				height: 700px;
+				background-color: white;
+				opacity: 0.5;
+				border-radius: 10px;
+			}
+			.form-style {
+				display: flex;
+				flex-direction: column;
+				width: 280px;
+			}
+			.btn-style {
+				height: 44px;
+				background-color: #41521f;
+				color: white;
+				font-size: 16px;
+				border-radius: 10px;
+				border: none;
+				margin-top: 40px;
+			}
+			.btn-style:hover {
+				background-color: #41521f;
+				opacity: 0.8;
+			}
+			input {
+				margin-bottom: 10px;
+				border: none;
+				border-bottom: 1px solid #41521f;
+			}
+			input:focus {
+				outline: none;
+			}
+			fieldset {
+				border: 1px solid #41521f;
+				margin-bottom: 10px;
+			}
+			label,
+			legend {
+				font-size: 14px;
+			}
+			h1 {
+				color: #41521f;
+			}
+
+			@media (max-width: 767px) {
+				.registration-card {
+					width: 100%;
+					height: 100%;
+					border-radius: 0px;
+				}
+				.form-style {
+					width: 90%;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="registration-card">
+				<h1>Registracija</h1>
+				<form class="form-style">
+					<label for="name">Ime</label>
+					<input type="text" id="name" name="name" />
+					<label for="surname">Prezime</label>
+					<input type="text" id="surname" name="surname" />
+					<label for="password">Vaša lozinka</label>
+					<input type="password" id="password" name="password" />
+					<label for="password-again">Molimo ponovite lozinku</label>
+					<input type="password" id="password-again" name="password-again" />
+					<label for="username">Korisničko ime:</label>
+					<input type="text" id="username" name="username" />
+					<label for="telephone">Kontakt:</label>
+					<input
+						type="tel"
+						id="telephone"
+						name="telephone"
+						placeholder="09x-xxx-xxxx"
+						pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+						required
+					/>
+					<fieldset>
+						<legend>Jeste li stariji od 18?</legend>
+						<div>
+							<input type="radio" id="positive" name="drone" value="positive" />
+							<label for="positive">Da</label>
+						</div>
+
+						<div>
+							<input type="radio" id="negative" name="drone" value="negative" />
+							<label for="negative">Ne</label>
+						</div>
+					</fieldset>
+
+					<label for="image">Postavite sliku profila:</label>
+					<input type="file" id="image" type="image" />
+					<div>
+						<input type="checkbox" id="checkbox" name="remember-me" />
+						<label for="remember-me">Zapamti me</label>
+					</div>
+					<input class="btn-style" type="submit" value="Registriraj me" />
+				</form>
+			</div>
+		</div>
+	</body>
+</html>
