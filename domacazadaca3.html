@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Treća zadaća</title>
+		<style>
+			body {
+				margin: 0;
+			}
+			label {
+				font-size: 14px;
+				text-align: left;
+			}
+			input,
+			select,
+			textarea,
+			fieldset {
+				outline: #7fb685;
+				border: 1px solid #7fb685;
+				border-radius: 5px;
+			}
+			.wrapper {
+				font-family: Arial, Helvetica, sans-serif;
+				width: 100vw;
+				height: 100vh;
+				background-color: #7fb685;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			.form-card {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+				padding: 60px;
+				width: 350px;
+				height: 550px;
+				gap: 10px;
+				background-color: rgba(255, 255, 255, 0.7);
+				border-radius: 10px;
+				color: #ddae7e;
+			}
+			.btn-style {
+				width: 100%;
+				height: 44px;
+				background-color: #ddae7e;
+				color: white;
+				font-size: 16px;
+				border-radius: 10px;
+				border: none;
+				margin-top: 40px;
+			}
+			.btn-style:hover {
+				opacity: 0.7;
+			}
+			.text-area {
+				width: 100%;
+				height: 100px;
+			}
+			@media (max-width: 767px) {
+				.form-card {
+					width: 100%;
+					height: 100%;
+					border-radius: 0px;
+					padding: 40px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrapper">
+			<form
+				action="#"
+				method="get"
+				oninput='pdv.value=parseInt(parseInt(cijena.value)+(cijena.value)*0.25).toString() + "kn"'
+				class="form-card"
+			>
+				<h1 style="">Algebra prijava</h1>
+				<label for="gradovi"
+					>Odaberite grad u kojem želite pohađati odabrani tečaj:</label
+				>
+				<input list="gradovi" name="grad" style="width: 100%" />
+				<datalist id="gradovi">
+					<option value="Zagreb"></option>
+					<option value="Rijeka"></option>
+					<option value="Osijek"></option>
+					<option value="Split"></option>
+					<option value="Šibenik"></option>
+				</datalist>
+				<label for="course">Odaberite tečaj koji želite pohađati:</label>
+				<select name="course" id="course" style="width: 100%">
+					<optgroup label="Frontend">
+						<option value="React.js">React.js</option>
+						<option value="Vue.js">Vue.js</option>
+						<option value="Angular">Angular</option>
+					</optgroup>
+					<optgroup label="Backend">
+						<option value="Django">Django</option>
+						<option value="Flask">Flask</option>
+						<option value="Spring">Spring</option>
+					</optgroup>
+				</select>
+				<label for="tekst">Recite nam zašto ste odabrali Algebru:</label><br />
+				<textarea
+					id="tekst"
+					name="tekst"
+					placeholder="Počnite tipkati ovdje..."
+					class="text-area"
+				></textarea>
+				<fieldset>
+					<legend>Izračun cijene tečaja s PDV-om:</legend>
+					<label for="cijena">Odaberite iznos tečaja bez PDV-a:</label>
+					<input
+						id="cijena"
+						name="cijena"
+						type="range"
+						min="10000"
+						max="30000"
+						value="15000"
+					/><br />
+					<label for="pdv">Cijena tečaja s PDV-om:</label>
+					<output name="pdv" for="cijena" value="oninput"></output>
+				</fieldset>
+				<button
+					type="button"
+					class="btn-style"
+					onclick="alert('Vaša prijava je poslana! :)')"
+				>
+					Prijava
+				</button>
+			</form>
+		</div>
+	</body>
+</html>
