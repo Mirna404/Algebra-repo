@@ -68,12 +68,12 @@ ul {
     margin-bottom: 10px;
 }
 
-input {
+input, .hover-btn {
     width: 600px;
     height:30px;
 }
 
-input[type="submit"] {
+input[type="submit"], .hover-btn {
     height:50px;
     background-color: #0F7173;
     color: white;
@@ -91,7 +91,56 @@ input[type="submit"]:hover {
 
 textarea {
     width: 600px; 
-    height: 100px
+    height: 100px;
+}
+
+.hover-btn {
+    cursor: pointer;
+}
+
+.hover-btn:hover {
+    opacity: 0.7;
+}
+
+.dropdown-hover {
+    position:relative;
+    display: inline-block;
+}
+
+.dropdown {
+    border: 1px solid #0F7173;
+    display: none;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    width: 557px;
+    height: auto;
+    padding: 20px;
+    background-color:white;
+    opacity: 0.9;
+}
+
+.dropdown a {
+    padding: 5px;
+    display:flex;
+    align-items: center;
+    height:30px;
+    width: 557px;
+    color: #0F7173;
+    text-decoration: none;
+}
+
+.dropdown a:nth-child(2), .dropdown a:hover {
+    background-color: #0F7173;
+    color: white;
+}
+
+.dropdown-hover:hover .hover-btn {
+    opacity:0.7;
+}
+
+.dropdown-hover:hover .dropdown {
+    display:flex;
 }
 
 /* Footer styling */
@@ -115,6 +164,14 @@ textarea {
 
     input {
         width:90%;
+    }
+
+    .hover-btn {
+        width: 90vw;
+    }
+
+    .dropdown, .dropdown a {
+        width: 88%;
     }
 
     form, textarea {
